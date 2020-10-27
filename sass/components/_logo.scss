@@ -1,0 +1,19 @@
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+}
+
+.logo__fisrt-word {
+  color: var(--accent-color);
+}
+
+.logo__second-word {
+  color: var(--studio-word-color);
+}
+
+.logo__second-word--dark-bcg {
+  color: var(--white-text-color);
+}

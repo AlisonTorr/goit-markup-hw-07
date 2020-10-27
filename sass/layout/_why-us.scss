@@ -1,0 +1,46 @@
+.why-us-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.why-us-item {
+  width: 270px;
+}
+
+.why-us-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icon-container {
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.why-us-icon {
+  width: 70px;
+  height: 70px;
+  display: block;
+}
+
+.why-us-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+}
+
+.why-us-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
