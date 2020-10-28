@@ -6,8 +6,8 @@
   font-size: 16px;
   line-height: 1.857;
   letter-spacing: 0.06em;
-  color: var(--primary-background-color);
-  background: var(--accent-color);
+  color: $primary-background-color;
+  background: $accent-color;
   border: none;
   border-radius: 4px;
   padding: 10px 32px;
@@ -55,7 +55,7 @@
   width: 528px;
   min-height: 580px;
   padding: 40px;
-  background-color: var(--primary-background-color);
+  background-color: $primary-background-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -74,12 +74,12 @@
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--primary-background-color);
+  background-color: $primary-background-color;
   cursor: pointer;
 }
 .close-btn:hover,
 .close-btn:focus > .close-btn__icon {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .contact-form__appeal {
@@ -96,7 +96,7 @@
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
 }
 
 .contact-form__field {
@@ -118,7 +118,7 @@
 }
 .contact-form__input:focus {
   outline: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid $accent-color;
   cursor: pointer;
 }
 
@@ -129,14 +129,14 @@
 }
 
 .contact-form__field:focus-within > .contact-form__icon {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .contact-form__input-name {
   display: block;
   text-align: initial;
   margin-bottom: 4px;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
 }
 
 .contact-form__user-comment {
@@ -151,7 +151,7 @@
 }
 .contact-form__user-comment:focus {
   outline: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid $accent-color;
 }
 
 .contact-form__agreement-checkbox {
@@ -186,12 +186,12 @@
   background-image: url(../../images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: $accent-color;
+  border-color: $accent-color;
 }
 
 .contact-form__agreement-terms-doc {
-  color: var(--accent-color);
+  color: $accent-color;
   text-decoration: underline;
 }
 
@@ -206,8 +206,8 @@
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  color: var(--white-text-color);
-  background-color: var(--accent-color);
+  color: $white-text-color;
+  background-color: $accent-color;
   border: none;
   border-radius: 4px;
   cursor: pointer;

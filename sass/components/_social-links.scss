@@ -14,32 +14,32 @@
   width: 44px;
   height: 44px;
   border-radius: 50px;
-  background-color: var(--primary-background-color);
+  background-color: $primary-background-color;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link-item:hover,
 .social-link-item:focus {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 .social-link-item:hover .social-link-icon {
-  fill: var(--white-text-color);
+  fill: $white-text-color;
 }
 .social-link-item:focus .social-link-icon {
-  fill: var(--white-text-color);
+  fill: $white-text-color;
 }
 
 .social-link-icon {
   width: 20px;
   height: 20px;
 
-  fill: var(--icon-static-color);
+  fill: $icon-static-color;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-icon:hover,
 .social-link-icon:focus {
-  fill: var(--white-text-color);
+  fill: $white-text-color;
 }
 
 /*=============FOOTER===============*/
@@ -56,10 +56,10 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-list-item-footer:hover {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 .social-link-list-item-footer:focus-within {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 .social-link-list-item-footer:not(:last-child) {
   margin-right: 10px;
@@ -82,5 +82,5 @@
 .social-link-icon-footer {
   width: 20px;
   height: 20px;
-  fill: var(--white-text-color);
+  fill: $white-text-color;
 }

@@ -7,13 +7,13 @@
 }
 
 .logo__fisrt-word {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .logo__second-word {
-  color: var(--studio-word-color);
+  color: $studio-word-color;
 }
 
 .logo__second-word--dark-bcg {
-  color: var(--white-text-color);
+  color: $white-text-color;
 }
