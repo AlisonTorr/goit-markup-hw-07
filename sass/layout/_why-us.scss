@@ -6,10 +6,10 @@
 
 .why-us-item {
   width: 270px;
-}
 
-.why-us-item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .icon-container {

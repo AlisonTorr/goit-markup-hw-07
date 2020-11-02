@@ -4,16 +4,16 @@
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
-}
 
-.logo__fisrt-word {
-  color: $accent-color;
-}
+  &__fisrt-word {
+    color: $accent-color;
+  }
 
-.logo__second-word {
-  color: $studio-word-color;
-}
+  &__second-word {
+    color: $studio-word-color;
 
-.logo__second-word--dark-bcg {
-  color: $white-text-color;
+    &--dark-bcg {
+      color: $white-text-color;
+    }
+  }
 }

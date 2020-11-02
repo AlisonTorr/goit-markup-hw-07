@@ -14,11 +14,12 @@
 
   box-shadow: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-btn:hover,
-.modal-btn:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
 }
 
 .backdrop {
@@ -32,36 +33,14 @@
 
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.8);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 999;
-
-  width: 528px;
-  min-height: 580px;
-  padding: 40px;
-  background-color: $primary-background-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.close-btn {
+.backdrop .close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -75,21 +54,33 @@
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: $primary-background-color;
-  cursor: pointer;
-}
-.close-btn:hover,
-.close-btn:focus > .close-btn__icon {
-  fill: $accent-color;
+
+  &:hover,
+  &:focus > .close-btn__icon {
+    fill: $accent-color;
+    cursor: pointer;
+  }
 }
 
-.contact-form__appeal {
-  display: inline-block;
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+
+  width: 528px;
+  min-height: 580px;
+  padding: 40px;
+  background-color: $primary-background-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .contact-form {
@@ -97,102 +88,113 @@
   line-height: 1.167;
   letter-spacing: 0.03em;
   color: $secondary-text-color;
-}
 
-.contact-form__field {
-  position: relative;
-  margin-bottom: 10px;
-}
+  &__appeal {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
 
-.contact-form__input {
-  display: block;
-  width: 448px;
-  height: 40px;
-  padding-top: 12px;
-  padding-right: 16px;
-  padding-bottom: 12px;
-  padding-left: 42px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  letter-spacing: 0.01em;
-}
-.contact-form__input:focus {
-  outline: none;
-  border: 1px solid $accent-color;
-  cursor: pointer;
-}
+  &__field {
+    position: relative;
+    margin-bottom: 10px;
+  }
 
-.contact-form__icon {
-  position: absolute;
-  left: 12px;
-  top: 32px;
-}
+  &__input {
+    display: block;
+    width: 448px;
+    height: 40px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    letter-spacing: 0.01em;
 
-.contact-form__field:focus-within > .contact-form__icon {
-  fill: $accent-color;
-}
+    &:focus {
+      outline: none;
+      border: 1px solid $accent-color;
+      cursor: pointer;
+    }
 
-.contact-form__input-name {
-  display: block;
-  text-align: initial;
-  margin-bottom: 4px;
-  color: $secondary-text-color;
-}
+    &-name {
+      display: block;
+      text-align: initial;
+      margin-bottom: 4px;
+      color: $secondary-text-color;
+    }
+  }
 
-.contact-form__user-comment {
-  width: 100%;
-  height: 120px;
-  padding: 12px 16px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  resize: none;
-}
-.contact-form__user-comment:focus {
-  outline: none;
-  border: 1px solid $accent-color;
-}
+  &__icon {
+    position: absolute;
+    left: 12px;
+    top: 32px;
 
-.contact-form__agreement-checkbox {
-  position: absolute;
-  appearance: none;
-  margin-right: 8px;
-}
+    .contact-form__field:focus-within > & {
+      fill: $accent-color;
+    }
+  }
 
-.contact-form__agreement-label {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-}
+  &__user-comment {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
 
-.contact-form__agreement-label::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  border: 2px solid #212121;
-  background-origin: border-box;
-  border-radius: 2px;
-  line-height: 1.714;
-}
+    &:focus {
+      outline: none;
+      border: 1px solid $accent-color;
+    }
+  }
 
-.contact-form__agreement-checkbox:checked
-  + .contact-form__agreement-label::before {
-  background-image: url(../../images/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
-  background-color: $accent-color;
-  border-color: $accent-color;
-}
+  &__agreement-checkbox {
+    position: absolute;
+    appearance: none;
+    margin-right: 8px;
+  }
 
-.contact-form__agreement-terms-doc {
-  color: $accent-color;
-  text-decoration: underline;
+  &__agreement-label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 15px;
+      margin-right: 8px;
+      border: 2px solid #212121;
+      background-origin: border-box;
+      border-radius: 2px;
+      line-height: 1.714;
+
+      .contact-form__agreement-checkbox:checked + & {
+        background-image: url(../../images/icon-check.svg);
+        background-size: contain;
+        background-origin: border-box;
+        background-color: $accent-color;
+        border-color: $accent-color;
+      }
+    }
+  }
+
+  &__agreement-terms-doc {
+    color: $accent-color;
+    text-decoration: underline;
+  }
 }
 
 .submit-button {
@@ -210,9 +212,10 @@
   background-color: $accent-color;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
-}
-.submit-button:hover,
-.submit-button:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
 }

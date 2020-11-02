@@ -1,16 +1,16 @@
-section {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
   margin: 0 auto;
-}
 
-.section-title {
-  margin: 0px;
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.667;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $primary-text-color;
+  &-title {
+    margin: 0px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.667;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+  }
 }
